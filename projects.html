@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lucas Hillar - Proyectos</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <div id="loader-bg">
+    <div class="loader-text"><span id="loader-message">Bienvenido</span></div>
+  </div>
+  <div id="particles-js"></div>
+  <header>
+    <div class="container header-flex fade-in-left">
+      <div class="name-profile">
+        <h1 id="name" class="fade-in-left">Lucas Agustín Hillar</h1>
+        <h2 id="role" class="fade-in-left">Analista IT SR</h2>
+      </div>
+      <div class="profile-pic fade-in-right">
+        <img src="assets/edit.jpg" alt="Foto de perfil" />
+      </div>
+    </div>
+    <div class="container lang-menu-wrapper">
+      <div class="lang-switch">
+        <button onclick="setLang('es')">Español</button>
+        <button onclick="setLang('en')">English</button>
+        <button id="toggle-dark" title="Modo oscuro/normal"><i class="fas fa-moon"></i></button>
+      </div>
+      <nav>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+        <ul class="menu" id="nav-menu">
+          <li style="--i:0"><a href="index.html#inicio" id="menu-home"><i class="fas fa-home"></i> <span>Inicio</span></a></li>
+          <li style="--i:4"><a href="skills.html" id="menu-skills"><i class="fas fa-tools"></i> <span>Habilidades</span></a></li>
+          <li style="--i:1"><a href="projects.html" id="menu-projects"><i class="fas fa-code"></i> <span>Proyectos</span></a></li>
+          <li style="--i:2"><a href="about.html" id="menu-about"><i class="fas fa-user"></i> <span>Acerca de</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <section id="proyectos">
+      <p>Aquí detallaré mis proyectos destacados, enlaces a repositorios y tecnologías utilizadas.</p>
+      <ul>
+        <li><b>Proyecto 1:</b> Scripts con Python. (In Development)</li>
+        <li><b>Proyecto 2:</b> Scripts con PowerShell. (In Development)</li>
+        <li><b>Proyecto 3:</b> E-learning - Cómo montar tu propio Truenas + Docker + Portainer (In Development)</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <p>© 2025 Lucas Agustín Hillar</p>
+    </div>
+  </footer>
+  <script src="assets/lang.js"></script>
+  <script src="assets/cursor.js"></script>
+  <script src="assets/particles.min.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const loaderBg = document.getElementById('loader-bg');
+      const msg = document.getElementById('loader-message');
+      msg.innerText = document.documentElement.lang === 'en' ? 'Welcome' : 'Bienvenido';
+      setTimeout(() => { loaderBg.classList.add('hide-loader'); }, 1800);
+    });
+    document.getElementById('toggle-dark').onclick = () => {
+      document.body.classList.toggle('dark');
+      document.getElementById('toggle-dark').innerHTML =
+        document.body.classList.contains('dark')
+          ? '<i class="fas fa-sun"></i>'
+          : '<i class="fas fa-moon"></i>';
+    };
+    document.querySelectorAll('.menu a').forEach(link =>
+      link.addEventListener('click', () => {
+        document.getElementById('menu-toggle').checked = false;
+      })
+    );
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 60, density: { enable: true, value_area: 700 } },
+        color: { value: "#00eaff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.3 },
+        size: { value: 3, random: true },
+        line_linked: { enable: true, distance: 120, color: "#00eaff", opacity: 0.2, width: 1 },
+        move: { enable: true, speed: 2 }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "grab" },
+          onclick: { enable: true, mode: "push" }
+        },
+        modes: {
+          grab: { distance: 120, line_linked: { opacity: 0.7 } },
+          push: { particles_nb: 2 }
+        }
+      },
+      retina_detect: true
+    });
+  </script>
+</body>
+</html>

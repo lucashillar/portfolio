@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lucas Hillar - Habilidades</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    /* Estilos específicos para la página de habilidades */
+    .skills-logos-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .skill-logo-card {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px #00eaff22;
+      padding: 1.2em 1.7em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 120px;
+      max-width: 140px;
+      font-weight: 600;
+      font-size: 1.05em;
+      transition: box-shadow 0.2s, transform 0.2s;
+      cursor: default;
+    }
+    .skill-logo-card:hover {
+      box-shadow: 0 4px 24px #00eaff66;
+      transform: translateY(-6px) scale(1.06);
+    }
+    .skill-logo-card img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      margin-bottom: 0.7em;
+    }
+    .skill-logo-card span {
+      margin-top: 0.5em;
+      text-align: center;
+      color: #1565c0;
+      font-size: 1em;
+    }
+  </style>
+</head>
+<body>
+  <div id="loader-bg">
+    <div class="loader-text"><span id="loader-message">Bienvenido/a - Welcome</span></div>
+  </div>
+  <div id="particles-js"></div>
+  <header>
+    <div class="container header-flex fade-in-left">
+      <div class="name-profile">
+        <h1 id="name" class="fade-in-left">Lucas Agustín Hillar</h1>
+        <h2 id="role" class="fade-in-left">Analista IT SR</h2>
+      </div>
+      <div class="profile-pic fade-in-right">
+        <img src="assets/edit.jpg" alt="Foto de perfil" />
+      </div>
+    </div>
+    <div class="container lang-menu-wrapper">
+      <div class="lang-switch">
+        <button onclick="setLang('es')">Español</button>
+        <button onclick="setLang('en')">English</button>
+        <button id="toggle-dark" title="Modo oscuro/normal"><i class="fas fa-moon"></i></button>
+      </div>
+      <nav>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+        <ul class="menu" id="nav-menu">
+           <li style="--i:0"><a href="index.html#inicio" id="menu-home"><i class="fas fa-home"></i> <span>Inicio</span></a></li>
+          <li style="--i:4"><a href="skills.html" id="menu-skills"><i class="fas fa-tools"></i> <span>Habilidades</span></a></li>
+          <li style="--i:1"><a href="projects.html" id="menu-projects"><i class="fas fa-code"></i> <span>Proyectos</span></a></li>
+          <li style="--i:2"><a href="about.html" id="menu-about"><i class="fas fa-user"></i> <span>Acerca de</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+<p>Detallo aquí las herramientas con las que he trabajado y tengo experiencia, son muchas herramientas, es posible que algunas no estén en el listado, me pueden consultar:</p>
+    <section id="skills-section">
+      <div class="skills-logos-grid">
+        <!-- Logos y nombres -->
+        <div class="skill-logo-card">
+          <img src="https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" />
+          <span>AWS</span>
+        </div>
+        <div class="skill-logo-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure" />
+          <span>Azure</span>
+        </div>
+        <div class="skill-logo-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="Google Workspace" />
+          <span>Google Workspace</span>
+        </div>
+        <div class="skill-logo-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt="Terraform" />
+          <span>Terraform</span>
+        </div>
+        <div class="skill-logo-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" />
+          <span>Docker</span>
+        </div>
+        <div class="skill-logo-card">
+          <img src="https://www.intel.com/content/dam/www/central-libraries/us/en/images/2022-08/vmware-logo-4x3-rwd.png" alt="VMware" />
+          <span>VMware</span>
+        </div>
+        <div class="skill-logo-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" />
+          <span>Linux</span>
+        </div>
+        <div class="skill-logo-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" alt="Windows Server" />
+          <span>Windows Server</span>
+        </div>
+        <div class="skill-logo-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+          <span>Python</span>
+        </div>
+        <div class="skill-logo-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+          <span>JavaScript</span>
+        </div>
+        <div class="skill-logo-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" />
+          <span>MySQL</span>
+        </div>
+        <div class="skill-logo-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
+          <span>GitHub</span>
+        </div>
+        <div class="skill-logo-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" alt="GitLab" />
+          <span>GitLab</span>
+        </div>
+        <div class="skill-logo-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/powershell/powershell-original.svg" alt="PowerShell" />
+          <span>PowerShell</span>
+        </div>
+        <div class="skill-logo-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg" alt="WordPress" />
+          <span>WordPress</span>
+        </div>
+        <div class="skill-logo-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg" alt="Grafana" />
+          <span>Grafana</span>
+        </div>
+        <div class="skill-logo-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/salesforce/salesforce-original.svg" alt="Salesforce" />
+          <span>Salesforce</span>
+        </div>
+        <div class="skill-logo-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg" alt="Trello" />
+          <span>Trello</span>
+        </div>
+        <div class="skill-logo-card">
+          <img src="https://cdn.worldvectorlogo.com/logos/asana-1.svg" alt="Asana" />
+          <span>Asana</span>
+        </div>
+        <div class="skill-logo-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" alt="Jira" />
+          <span>Jira</span>
+        </div>
+        <div class="skill-logo-card">
+          <img src="https://www.svgrepo.com/show/354597/zendesk.svg" alt="Zendesk" />
+          <span>Zendesk</span>
+        </div>
+        <div class="skill-logo-card">
+          <img src="https://cdn.worldvectorlogo.com/logos/active-directory-1.svg" alt="Active Directory" />
+          <span>Active Directory</span>
+        </div>
+        <div class="skill-logo-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/filezilla/filezilla-original.svg" alt="FileZilla" />
+          <span>FileZilla</span>
+        </div>
+        <div class="skill-logo-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dbeaver/dbeaver-original.svg" alt="DBeaver" />
+          <span>DBeaver</span>
+        </div>
+        <div class="skill-logo-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/Fortinet_logo.svg" alt="Fortinet" />
+          <span>Fortinet</span>
+        </div>
+        <div class="skill-logo-card">
+          <img src="https://1000logos.net/wp-content/uploads/2020/10/MikroTik-Logo.png" alt="Mikrotik" />
+          <span>Mikrotik</span>
+        </div>
+        <div class="skill-logo-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Kaspersky_logo.svg/1200px-Kaspersky_logo.svg.png" alt="Kaspersky" />
+          <span>Kaspersky</span>
+        </div>
+        <div class="skill-logo-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Nessus-Professional-FullColor-RGB.svg/2560px-Nessus-Professional-FullColor-RGB.svg.png" alt="Nessus" />
+          <span>Nessus</span>
+        </div>
+        <div class="skill-logo-card">
+          <img src="https://e7.pngegg.com/pngimages/428/850/png-clipart-alienvault-ossim-computer-security-threat-intrusion-detection-system-tribal-church-ministering-to-the-missing-generatio-computer-network-angle.png" alt="AlienVault" />
+          <span>AlienVault</span>
+        </div>
+        <div class="skill-logo-card">
+          <img src="https://seekvectorlogo.com/wp-content/uploads/2022/02/power-bi-vector-logo-2022.png" alt="PowerBI" />
+          <span>PowerBI</span>
+        </div>
+        <div class="skill-logo-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGgNRUYMBpRgCXzd717TZisj7A-GVQqwn03w&s" alt="Excel" />
+          <span>Excel</span>
+        </div>
+        <div class="skill-logo-card">
+          <img src="https://cdn.freelogovectors.net/wp-content/uploads/2024/02/chatgpt-logo-01-freelogovectors.net_.png" alt="ChatGPT" />
+          <span>ChatGPT</span>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <p>© 2025 Lucas Agustín Hillar</p>
+    </div>
+  </footer>
+  <script src="assets/lang.js"></script>
+  <script src="assets/cursor.js"></script>
+  <script src="assets/particles.min.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const loaderBg = document.getElementById('loader-bg');
+      const msg = document.getElementById('loader-message');
+      msg.innerText = "Bienvenido/a - Welcome";
+      setTimeout(() => { loaderBg.classList.add('hide-loader'); }, 1800);
+    });
+    document.getElementById('toggle-dark').onclick = () => {
+      document.body.classList.toggle('dark');
+      document.getElementById('toggle-dark').innerHTML =
+        document.body.classList.contains('dark')
+          ? '<i class="fas fa-sun"></i>'
+          : '<i class="fas fa-moon"></i>';
+    };
+    document.querySelectorAll('.menu a').forEach(link =>
+      link.addEventListener('click', () => {
+        document.getElementById('menu-toggle').checked = false;
+      })
+    );
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 60, density: { enable: true, value_area: 700 } },
+        color: { value: "#00eaff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.3 },
+        size: { value: 3, random: true },
+        line_linked: { enable: true, distance: 120, color: "#00eaff", opacity: 0.2, width: 1 },
+        move: { enable: true, speed: 2 }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "grab" },
+          onclick: { enable: true, mode: "push" }
+        },
+        modes: {
+          grab: { distance: 120, line_linked: { opacity: 0.7 } },
+          push: { particles_nb: 2 }
+        }
+      },
+      retina_detect: true
+    });
+  </script>
+</body>
+</html>
